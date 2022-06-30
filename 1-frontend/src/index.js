@@ -7,14 +7,13 @@ import { Auth0Provider } from "@auth0/auth0-react";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const localhost = "www.google.com";
 
 root.render(
 <React.StrictMode>
   <Auth0Provider
-    domain="dev-6x6ilyd8.us.auth0.com"
-    clientId="3hto8VkE16fLJrxEJR73asr9jLeCUSh6"
-    redirectUri={localhost}>
+    domain="dev-q5j3gxqr.eu.auth0.com"
+    clientId="xNT6U07B4povbI2TNwJqezTc3Iuy4cd8"
+    redirectUri={window.location.origin}>
     
       <App />
   </Auth0Provider>    
