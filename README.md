@@ -39,9 +39,11 @@ Building on from task 1 and using the same `1-frontend` project, follow part two
 Once you've worked through the tutorial, practice explaining (within your teams) the answers to the following questions.
 
 1.  What are the additional props you need to provide to `Auth0Provider`? What purpose do they serve?
+
     Ans: Audience and scope: Audience is the API url and scope which has been set to allow the users to only read the metadata. 
 
 2.  When we call `getAccessTokenSilently`, what does it return and what can we then do with the return value? (Use `console.log` and https://jwt.io/ to decode, if necessary.)
+
     Ans: It returns a promise which gives us the access token that can be used to call the a protected API (password access only). 
 
 (Feel free to go back to the tutorial/docs when you're explaining!)
@@ -61,10 +63,20 @@ The `2-backend` folder contains an Express app (that is completely unrelated to 
 Once you've worked through the tutorial, practice explaining (within your teams) the answers to the following questions.
 
 1.  How would you explain the concept of permissions?
+
+    Ans: The act of allowing the user to access and do certain actions to the system
 2.  Which NPM packages does the backend use for authentication? What purpose does each of those packages serve? (Feel free to google their docs for a better idea)
+
+    Ans: express for the server and jwt for checking the access token
 3.  What HTTP status code should our server respond with if the JWT was invalid?
+
+    Ans: 401 Unauthorised
 4.  What HTTP status code should our server respond with if the JWT was valid but the token didn't contain necessary permissions/scopes?
+
+    Ans: 403 forbidden
 5.  In our Express app, where can we use the functions `checkJwt` and `checkScopes` -- and why?
+
+    Ans: checkJwt in the router and checkscopes in the router to allow certain actions.
 
 (Feel free to go back to the tutorial/docs when you're explaining!)
 
