@@ -15,8 +15,14 @@ The `1-frontend` folder is a React project (which has already been initialised w
 Once you've worked through the tutorial, practice explaining (within your teams) the answers to the following questions.
 
 1.  What purpose does the callback URL serve?
+
+    Ans: The first page where the user is direct to when they logged in
 2.  What purpose does the logout URL serve?
+
+    Ans: The first page where the user is direct to when they logged out
 3.  Which React API(s) does Auth0 use to provide authentication information to other components (without prop drilling)?
+
+    Ans: React context API, it creates global variables that can be passed around.
 
 (Feel free to go back to the tutorial/docs when you're explaining!)
 
