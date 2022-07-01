@@ -1,11 +1,13 @@
+const { application } = require('express');
 const express = require('express');
 const app = express();
 const { auth } = require('express-oauth2-jwt-bearer');
+const port= 3001;
 
 // Authorization middleware. When used, the Access Token must
 // exist and be verified against the Auth0 JSON Web Key Set.
 const checkJwt = auth({
-  audience: 'YOUR_API_IDENTIFIER',
+  audience: "https://simtech",
   issuerBaseURL: `https://dev-6x6ilyd8.us.auth0.com/`,
 });
 // server.js
@@ -33,3 +35,5 @@ app.get('/api/private-scoped', checkJwt, checkScopes, function(req, res) {
     message: 'Hello from a private endpoint! You need to be authenticated and have a scope of read:messages to see this.'
   });
 });
+
+app.listen(port);
