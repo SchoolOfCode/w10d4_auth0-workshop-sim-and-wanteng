@@ -39,7 +39,10 @@ Building on from task 1 and using the same `1-frontend` project, follow part two
 Once you've worked through the tutorial, practice explaining (within your teams) the answers to the following questions.
 
 1.  What are the additional props you need to provide to `Auth0Provider`? What purpose do they serve?
+    Ans: Audience and scope: Audience is the API url and scope which has been set to allow the users to only read the metadata. 
+
 2.  When we call `getAccessTokenSilently`, what does it return and what can we then do with the return value? (Use `console.log` and https://jwt.io/ to decode, if necessary.)
+    Ans: It returns a promise which gives us the access token that can be used to call the a protected API (password access only). 
 
 (Feel free to go back to the tutorial/docs when you're explaining!)
 
