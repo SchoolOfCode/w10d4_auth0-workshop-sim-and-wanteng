@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -13,7 +14,9 @@ root.render(
   <Auth0Provider
     domain="dev-q5j3gxqr.eu.auth0.com"
     clientId="xNT6U07B4povbI2TNwJqezTc3Iuy4cd8"
-    redirectUri={window.location.origin}>
+    redirectUri={window.location.origin}
+    audience="https://dev-q5j3gxqr.eu.auth0.com/api/v2/"
+    scope="read:current_user update:current_user_metadata">
     
       <App />
   </Auth0Provider>    
